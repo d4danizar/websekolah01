@@ -1,0 +1,46 @@
+/*
+Theme Name: School Web Sample 01
+Theme URI: 
+Author: Developer
+Author URI: 
+Description: Tema WordPress untuk website sekolah dengan Tailwind CSS dan Alpine.js
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: schoolweb-sample01
+*/
+
+/* Mobile Menu Animation Styles */
+#mobile-menu {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Bento Grid Styles */
+.bento-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.bento-item-large {
+    min-height: 24rem;
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    .bento-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    
+    .bento-item-large {
+        grid-column: span 2;
+        grid-row: span 2;
+        height: 100%;
+    }
+    
+    .bento-item-small {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
